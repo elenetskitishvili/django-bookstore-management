@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authors and Books</title>
+  </head>
+  <body>
+    <h2>Authors and Their Books</h2>
+    <ul>
+      {% for author in authors %}
+      <li>
+        <strong>{{ author.name }}</strong> has written:
+        <ul>
+          {% for book in author.book_set.all %}
+          <li>{{ book.title }}</li>
+          {% empty %}
+          <li>No books available</li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

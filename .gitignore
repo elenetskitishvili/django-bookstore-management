@@ -1,0 +1,32 @@
+# Ignore virtual environment folders
+venv/
+env/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore Django migrations
+*/migrations/*
+
+# Ignore the settings file containing sensitive information (if any)
+*.env
+
+# Ignore static files collected by Django
+staticfiles/
+
+# Ignore media files (if you have user-uploaded files)
+media/
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore all files in the root except the database file
+!.gitignore
