@@ -11,7 +11,7 @@
     <ul>
       {% for author in authors %}
       <li>
-        <strong>{{ author.name }}</strong> has written:
+        <strong>{{ author.name }}</strong> has written {{ author.number_of_books }} books:
         <ul>
           {% for book in author.book_set.all %}
           <li>{{ book.title }}</li>

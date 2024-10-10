@@ -10,7 +10,17 @@
     <h2>Students and Their Courses</h2>
     <ul>
       {% for student in students %}
-      <li>{{ student.name }} is enrolled in: {{ student.list_courses }}</li>
+      <li>
+        <strong>{{ student.name }}</strong> (Age: {{ student.age }}) is enrolled
+        in:
+        <ul>
+          {% for course in student.courses.all %}
+          <li>{{ course.name }}</li>
+          {% empty %}
+          <li>No courses available</li>
+          {% endfor %}
+        </ul>
+      </li>
       {% endfor %}
     </ul>
   </body>
